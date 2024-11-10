@@ -1,8 +1,10 @@
 # import modules
 import pandas as pd
+from pandas.core.interchange import dataframe
+
 
 # clean data
-def clean_data(df: object) -> object:
+def clean_data(df: dataframe) -> dataframe:
     """
        ECommerce Transformation Function in Python with Error Handling
        :param df: pandas dataframe, extracted ecommerce data 1
@@ -13,8 +15,8 @@ def clean_data(df: object) -> object:
     df = df.drop_duplicates()
 
     # replace missing values in numeric columns with the mean
-    df = df.fillna(df.mean(), inplace=True)
-
+    # df = df.fillna(df.mean(), inplace=True)
+    df = df.fillna(df.mean(numeric_only=True))
     # drop rows with any remaining null values
     df = df.dropna()
 

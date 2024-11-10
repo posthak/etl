@@ -9,7 +9,7 @@ def load_data(ecommerce_df: object):
     :return: n/a
     """
     # Create a connection to the PostgreSQL database
-    engine = create_engine('postgresql://username:password@localhost:5432/mydatabase')
+    engine = create_engine('postgresql://postgres:postgres@localhost:5432/sales')
 
     # Load the DataFrame into the database as a new table
     ecommerce_df.to_sql('EcommerceData', engine, if_exists='replace', index=False)

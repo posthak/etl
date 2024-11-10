@@ -28,7 +28,7 @@ def run_pipeline():
                                   customers_df=clean_customers_df)
 
     # Step 3: Load data
-    load.load_data(df=ecommerce_df)
+    load.load_data(ecommerce_df)
 
 
 if __name__ == "__main__":

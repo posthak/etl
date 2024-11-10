@@ -1,5 +1,8 @@
 # Import Methods
 # <-- your code here -->
+from Chapters.chapter_07.etl.extract import extract_data
+from Chapters.chapter_07.etl.load import load_data
+from Chapters.chapter_07.etl.transform import transform_data
 
 # Lazy - Import of Paths
 # TODO: Create config.yaml file
